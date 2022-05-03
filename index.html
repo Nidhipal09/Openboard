@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Openboard Clone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="options-container ">
+        <span class="material-icons" id="menu">close</span>
+
+    </div>
+    <div class="tools-container scale-tools">
+        <span class="material-icons" id="pencil">edit</span>
+        <span class="material-icons" id="eraser">remove</span>
+        <span class="material-icons" id="shapes">dashboard</span>
+        <span class="material-icons" id="undo">undo</span>
+        <span class="material-icons" id="redo">redo</span>
+        <span class="material-icons" id="notes">description</span>
+        <span class="material-icons" id="upload">upload</span>
+        <span class="material-icons" id="download">download</span>
+    </div>
+
+    <div class="pencil-tool-container">
+        <div class="pencil-width-container">
+            <input type="range" min="5" max="25" value="10">
+        </div>
+        <div class="pencil-color-container">
+            <div class="pencil-color" id="red"></div>
+            <div class="pencil-color" id="blue"></div>
+            <div class="pencil-color" id="green"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-container">
+        <div class="eraser-width-container">
+            <input type="range" min="10" max="50" value="20">
+        </div>
+    </div>
+    <div class="shapes-tool-container">
+        <span class="material-icons" id="rectangle">rectangle</span>
+        <span class="material-icons" id="line">horizontal_rule</span>
+    </div>
+ 
+    <template>
+        <div class="notes-container">
+            <div class="notes-header">
+                <div class="notes-title"></div>
+                <div class="notes-actions">
+                    <div id="minimize">
+                        <span class="material-icons">remove</span>
+                    </div>
+                    <div id="close">
+                        <span class="material-icons">close</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="notes-body">      
+                <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </template>
+
+    <canvas></canvas>
+
+    
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="canvas.js"></script>
+</body>
+</html>

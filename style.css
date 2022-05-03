@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.options-container{
+    background-color: rgb(241, 231, 231);
+    width: 3rem;
+    height: 3.5rem;
+
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+
+    display: flex;
+    justify-content: center;   /* horizontal align */
+    align-items: center;    /* vertical align */
+
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+#menu{
+    font-size: 2.5rem;
+
+}
+
+.tools-container{
+    display: flex;
+    background-color: rgb(241, 231, 231);
+    width: 45vw;
+    height: 3.6rem;
+    justify-content: space-around;
+
+    position: absolute;
+    top: 2rem;
+    left: 26vw;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+
+.tools-container *{
+    font-size: 3.5rem;
+}
+
+.tools-container span:hover{
+    background-color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+
+
+
+.pencil-tool-container{
+    background-color: rgb(241, 231, 231);
+    width: 6.5rem;
+    height: 4rem;
+
+    position: absolute;
+    top: 6rem;
+    left: 23vw;
+    
+    cursor: pointer;
+    display: none;
+}
+
+.scale-tools{
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+
+.pencil-width-container, .eraser-width-container{
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+.pencil-width-container input, .eraser-width-container input{
+    width: 95%;
+}
+
+.pencil-color-container{
+    width: 100%;
+    height: calc(100% - 2rem);
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.pencil-color{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.pencil-color:hover{
+    transform: scale(1.1);
+} 
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
+
+.eraser-tool-container{
+    background-color: rgb(241, 231, 231);
+    width: 6.5rem;
+    height: 2rem;
+
+    position: absolute;
+    top: 6rem;
+    left: 31vw;
+
+    cursor: pointer;
+    display: none;
+}
+
+.shapes-tool-container{
+    background-color: rgb(241, 231, 231);
+    width: 5rem;
+    height: 2rem;
+
+    position: absolute;
+    top: 6rem;
+    left: 39vw;
+
+    display: none;
+}
+
+.shapes-tool-container *{
+    margin-top: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.shapes-tool-container span:hover{
+    transform: scale(1.3);
+}
+
+
+.notes-container{
+    width: 15rem;
+    height: 15rem;
+
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+}
+
+.notes-header{
+    height: 3rem;
+    background-color: rgb(65, 249, 255);
+    padding: 0.6rem;
+}
+
+.notes-title{
+    width: 11rem;
+    color: black;
+}
+
+.notes-actions{
+    width: 4rem;
+    margin-left: 11rem;
+}
+
+.notes-actions span{
+    cursor: pointer;
+}
+
+.notes-actions span:hover{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.notes-body{
+    height: calc(100% - 3rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: "block";
+}
+
+#textarea{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(122, 185, 177);
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+#uploadedImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
